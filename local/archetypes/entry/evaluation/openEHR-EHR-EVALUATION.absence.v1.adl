@@ -75,7 +75,7 @@ Not to be used to record the exclusion of adverse reactions, medication use, pro
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4d4b78d12bc7999f5027ef1767bf72cd">
+		["MD5-CAM-1.0.1"] = <"2a801489b8a473a9c923817d3f156489">
 		["build_uid"] = <"e0211ce5-890e-4d29-b298-526f0e1cfda3">
 		["revision"] = <"1.0.0">
 	>
@@ -99,6 +99,11 @@ definition
 						value matches {
 							C_DV_QUANTITY <
 															>
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- DV_CODED_TEXT
+						value matches {
+							DV_CODED_TEXT matches {*}
 						}
 					}
 				}
@@ -160,6 +165,10 @@ ontology
 					text = <"DV_QUANTITY">
 					description = <"*">
 				>
+				["at0008"] = <
+					text = <"DV_CODED_TEXT">
+					description = <"*">
+				>
 			>
 		>
 		["nb"] = <
@@ -197,6 +206,10 @@ ontology
 				>
 				["at0007"] = <
 					text = <"*DV_QUANTITY (en)">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"*DV_CODED_TEXT (en)">
 					description = <"*">
 				>
 			>
